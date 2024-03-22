@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model EmployeeCrud.Models.Entities.Employee
+
+<h1>Edit Employee</h1>
+
+@if (Model is null)
+{
+    <p>Employee was not found with this id</p>
+}
+else
+{
+    <form method="post">
+        <div class="mt-3">
+            <label class="form-label">Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly />
+        </div>
+
+
+
+        <div class="mt-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" asp-for="Name" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">DepartmentName</label>
+            <input type="text" class="form-control" asp-for="DepartmentName" />
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label">Salary</label>
+            <input type="text" class="form-control" asp-for="Salary" />
+        </div>
+@* 
+        <div class="mt-3">
+            <input type="checkbox" class="form-check-input" id="Subscribed" asp-for="Subscribed" />
+            <label class="form-check-label" for="Subscribed">Subscribed</label>
+        </div>
+ *@
+        <div class="mt-3">
+            <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+
+    </form>
+}
